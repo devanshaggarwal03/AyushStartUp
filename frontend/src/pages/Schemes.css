@@ -1,0 +1,175 @@
+.container {
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+  }
+  
+  .container.light {
+    background-color: #f5f5f5;
+  }
+  
+  .container.dark {
+    background-color: #1a1a1a;
+  }
+  
+  .schemes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+  
+  .scheme-card {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .scheme-card:hover {
+    transform: translateY(2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .scheme-card.light {
+    background-color: #ffffff;
+  }
+  
+  .scheme-card.dark {
+    background-color: #2c2c2c;
+  }
+  
+  .scheme-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+  }
+  
+  .scheme-image.dark {
+    filter: brightness(80%);
+  }
+  
+  .scheme-content {
+    padding: 1.5rem;
+  }
+  
+  .scheme-content h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #4CAF50;
+  }
+  
+  .scheme-content h3 {
+    font-size: 1.3rem;
+    color: #45a049;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .scheme-text {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    text-align: justify;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    padding-right: 10px;
+  }
+  
+  .scheme-text.light {
+    color: #333;
+  }
+  
+  .scheme-text.dark {
+    color: #ddd;
+  }
+  
+  .scheme-text p {
+    margin-bottom: 1rem;
+  }
+  
+  .scheme-text ul, .scheme-text ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .scheme-text li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .scheme-text ul li {
+    list-style-type: disc;
+  }
+  
+  .scheme-text ol li {
+    list-style-type: decimal;
+  }
+  
+  .site-refer {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .site-refer.light {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  
+  .site-refer.dark {
+    background-color: #45a049;
+    color: #fff;
+  }
+  
+  .site-refer:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .site-refer.light:hover {
+    background-color: #45a049;
+  }
+  
+  .site-refer.dark:hover {
+    background-color: #3d8b3d;
+  }
+  
+  /* Custom scrollbar for webkit browsers */
+  .scheme-text::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .scheme-text::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .scheme-text::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  .scheme-text::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .schemes-container {
+      padding: 1rem;
+    }
+  
+    .scheme-card {
+      max-width: 100%;
+    }
+  
+    .scheme-text {
+      max-height: 300px;
+    }
+  }

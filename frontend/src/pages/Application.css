@@ -1,0 +1,252 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+.application-container {
+  min-height: 100vh;
+  background-size: cover; /* Ensure the image covers the container */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed; /* Fix the background image position */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.application-container.light {
+  background-color: #121212; /* Light background color for light mode */
+  background-image: url("../assets/3.png");
+}
+
+.application-container.dark {
+  background-color: #121212; /* Dark background color for dark mode */
+  background-image: url("../assets/image.png");
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px;
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.30); 
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+  width: 100%;
+  max-width: 700px; /* Set max-width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation on hover */
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 26px; /* Slightly larger heading */
+  color: #333; /* Dark text color for better readability */
+  text-align: center;
+  text-transform: uppercase;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333; /* Dark text color */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px; /* Slightly larger radius for a softer look */
+  box-sizing: border-box;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  background-color: #f0f8ff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin-top: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px); /* Lift button on hover */
+}
+
+button[type="button"] {
+  background-color: #28a745;
+  margin-right: 10px;
+}
+
+button[type="button"]:hover {
+  background-color: #218838;
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-buttons button {
+  margin: 0 10px; /* Add space between buttons */
+}
+
+/* File Input Styling */
+input[type="file"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px; /* Match with other input fields */
+  background-color: #fff;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #0056b3;
+}
+
+input[type="file"]:focus {
+  border-color: #007bff;
+  background-color: #f0f8ff;
+}
+
+/* Document Upload Section */
+.document-upload {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.document-upload label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333; /* Dark text color */
+}
+
+.document-upload input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px; /* Match with input fields */
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.document-upload input[type="file"]:focus {
+  border-color: #007bff;
+}
+
+.document-requirements {
+  background: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.document-requirements ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.document-requirements li {
+  margin-bottom: 10px;
+  color: #333; /* Dark text color */
+}
+
+/* Dark mode adjustments */
+.application-container.dark .form-container,
+.application-container.dark .document-upload,
+.application-container.dark .document-requirements {
+  background: rgba(34, 34, 34, 0.40); /* Darker background for dark mode */
+  color: #f0f4f8; /* Light text color for dark mode */
+  border: 1px solid #444; /* Darker border color */
+}
+
+.application-container.dark h2,
+.application-container.dark label,
+.application-container.dark input,
+.application-container.dark textarea,
+.application-container.dark select,
+.application-container.dark button {
+  color: #f0f4f8; /* Light text color for dark mode */
+}
+
+.application-container.dark input,
+.application-container.dark textarea,
+.application-container.dark select {
+  background-color: #1e1e1e; /* Darker background for input fields in dark mode */
+  border-color: #444; /* Darker border color */
+}
+
+.application-container.dark input:focus,
+.application-container.dark textarea:focus,
+.application-container.dark select:focus {
+  border-color: #007bff;
+  background-color: #2b2b2b; /* Darker background on focus */
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .application-container {
+    padding: 10px;
+  }
+
+  .form-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .form-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}

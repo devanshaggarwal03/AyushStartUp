@@ -1,0 +1,36 @@
+.translate {
+    padding: 10px;
+    border-radius: 30px; /* Reduced border radius for better fit */
+    background-color: black;
+    color: white;
+    position: fixed; /* Use fixed positioning to keep it within the viewport */
+    right: 40px; /* Position it from the right edge */
+    bottom: 40px; /* Position it from the bottom edge */
+    z-index: 1000; /* Ensure it's above other elements */
+    width: 240px;
+    opacity: 0.80;
+    appearance: none; /* Remove default select styles */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 16px;
+    padding: 8px 32px 8px 16px; /* Adjust padding to center the text */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.dark .translate {
+    background-color: white;
+    color: black;
+}
+
+.translate option {
+    background-color: white;
+    color: black;
+}
+
+.dark .translate option {
+    background-color: black;
+    color: white;
+}

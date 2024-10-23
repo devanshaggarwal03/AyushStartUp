@@ -1,0 +1,450 @@
+/* General Page Styling */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container for the whole page */
+.container {
+    background-color: transparent;
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Theme variables */
+.light {
+    --bg-color: #f0f4f8;
+    --text-color: #333;
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+    --bg-color: #1a1a2e;
+    --text-color: #e0e0e0;
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.resources-container{
+    width: 80%;
+}
+
+/* Apply theme */
+.container {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Hero Section Styling */
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 0 0 50% 50% / 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Resource Categories Section */
+.resource-category {
+    padding: 40px 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+.resource-category h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+    position: relative;
+}
+
+.resource-category h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Category Box Styling */
+.category {
+    background-color: var(--card-bg);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 15px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.category::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(30deg);
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.category h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.category p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.category ul li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.category ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.category a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.category a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* FAQ Section Styling */
+.faq {
+    padding: 60px 20px;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.faq h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+    position: relative;
+}
+
+.faq h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 1.3rem;
+    cursor: pointer;
+    position: relative;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    margin: 0;
+    color: var(--primary-color);
+    transition: background-color 0.3s ease;
+}
+
+.faq-item h3:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.faq-item p {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 0 0 10px 10px;
+    margin-top: 0;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.faq-item .arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    border: solid var(--primary-color);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.faq-item .arrow.open {
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+/* Contact Section Styling */
+.contact {
+    padding: 60px 20px;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+    position: relative;
+}
+
+.contact h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+.contact button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.contact p {
+    margin-top: 30px;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+@media (max-width: 1200px) {
+    .resource-category,
+    .faq,
+    .contact {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.1rem;
+    }
+
+    .resource-category h2,
+    .faq h2,
+    .contact h2 {
+        font-size: 2.2rem;
+    }
+
+    .category h3 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .resource-category h2,
+    .faq h2,
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .category h3 {
+        font-size: 1.4rem;
+    }
+
+    .category p,
+    .faq-item h3 {
+        font-size: 1rem;
+    }
+
+    .faq-item .arrow {
+        padding: 4px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 40px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .resource-category,
+    .faq,
+    .contact {
+        padding: 30px 15px;
+    }
+
+    .resource-category h2,
+    .faq h2,
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .category {
+        padding: 20px;
+    }
+
+    .category h3 {
+        font-size: 1.3rem;
+    }
+
+    .category p,
+    .faq-item h3,
+    .contact label,
+    .contact input,
+    .contact textarea,
+    .contact button {
+        font-size: 0.9rem;
+    }
+
+    .contact button {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-section h1 {
+        font-size: 1.6rem;
+    }
+
+    .resource-category h2,
+    .faq h2,
+    .contact h2 {
+        font-size: 1.6rem;
+    }
+
+    .category h3 {
+        font-size: 1.2rem;
+    }
+}

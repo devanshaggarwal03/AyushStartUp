@@ -1,0 +1,249 @@
+/* General Styles */
+.home-container {
+    margin-top: 40px; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 0 4%;
+    color: #333; /* Default text color for light mode */
+}
+
+.hero-section {
+    padding: 100px 20px; 
+    border-radius: 20px; 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); 
+    margin-bottom: 50px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+.hero-section h1 {
+    font-size: 2.65rem; 
+    margin-bottom: 20px;
+    color: #181818;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section p {
+    font-size: 1.35rem; 
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #333;
+}
+
+.hero-section .cta-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.4s ease;
+}
+
+.hero-section .cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* About, Features, and Steps Sections */
+.about-portal, .features-container, .steps-container {
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    margin: 40px auto; 
+    max-width: 1600px;
+    text-align: center;
+    transition: box-shadow 0.4s ease;
+}
+
+.about-portal h2, .features-container h2, .steps-container h2 {
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+    color: #000;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-portal h2:hover, .features-container h2:hover, .steps-container h2:hover {
+    transform: scale(1.05);
+}
+
+.about-portal p, .features-container p, .steps-container p {
+    font-size: 19px;
+    text-align: center;
+    text-wrap: wrap;
+    font-weight: bold;
+    color: #333;
+}
+
+.features-container, .steps-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features, .steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.features div, .steps div {
+    flex: 1 1 22%;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.50);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.features div:hover, .steps div:hover {
+    transform: translateY(-7px); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.features h3, .steps h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #000;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Call-to-action section */
+.cta-section {
+    background: rgba(255, 255, 255, 0.15);
+    color: #333;
+    padding: 60px 20px; 
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    margin-top: 50px;
+    text-align: center;
+    transition: box-shadow 0.4s ease;
+}
+
+.cta-section h2 {
+    font-size: 2rem; 
+    margin-bottom: 20px;
+    color: #000;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #000;
+    font-weight: 700;
+}
+
+.cta-section .cta-button {
+    background-color: #fff;
+    color: #007bff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.4s ease;
+}
+
+.cta-section .cta-button:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transform: scale(1.1); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Dark mode adjustments */
+.home-container.dark {
+    color: #fff;
+}
+
+.hero-section.dark {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section.dark h1,
+.hero-section.dark p {
+    color: #fff;
+}
+
+.about-portal.dark, 
+.features-container.dark, 
+.steps-container.dark, 
+.cta-section.dark {
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.about-portal.dark h2, 
+.features-container.dark h2, 
+.steps-container.dark h2, 
+.cta-section.dark h2,
+.about-portal.dark p, 
+.features-container.dark p, 
+.steps-container.dark p, 
+.cta-section.dark p {
+    color: #fff;
+}
+
+.features-container.dark div, 
+.steps-container.dark div {
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.features-container.dark div:hover, 
+.steps-container.dark div:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.features-container.dark h3, 
+.steps-container.dark h3 {
+    color: #fff;
+}
+
+.cta-section.dark .cta-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.cta-section.dark .cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .features div, .steps div {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-section p {
+        font-size: 1.1rem;
+    }
+    
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+}
